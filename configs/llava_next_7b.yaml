@@ -1,0 +1,39 @@
+# LLaVA-NeXT-7B (Sec. 5.6). Direction, depth, threshold, entropy band, alpha and w_tau
+# are re-estimated by the same procedure.
+# Run compute_direction.py, select_layer.py, calibrate.py and select_strength.py
+# before scripts/caption.py.
+
+model:
+  hf_id: llava-hf/llava-v1.6-vicuna-7b-hf
+  dtype: float16
+  attn_implementation: eager
+
+direction:
+  file: outputs/llava_next_7b/direction.pt   # written by scripts/compute_direction.py
+
+steering:
+  layer: null              # set by scripts/select_layer.py
+  layer_candidates: [27, 28, 29, 30, 31]
+  alpha: null              # set by scripts/select_strength.py
+  depth_alpha: 1.1         # strength held fixed during depth selection
+  k: 0.8
+  k_matched: null
+  w_tau: null              # set by scripts/select_strength.py
+
+calibration:
+  pool: data/calibration/pool.json   # 100 COCO train2014 images, 500 existence queries
+  seed: 42
+  replicates: 10           # development panels: pools with seeds 42..51 (replicate 0 = pool)
+  alpha_grid: [0.3, 0.6, 1.1, 1.6]
+  w_tau_grid: [0.25, 0.5, 1.0]
+
+evaluation:
+  pope_max_new_tokens: 10      # existence-query answers
+  chair_prompt: Please describe this image in detail.   # captions for strength selection and the demo
+  chair_max_new_tokens: 512
+  batch_size: 1            # any-resolution inputs differ in length; decode one at a time
+  caption_batch_size: 1
+
+paths:
+  coco_root: data/coco
+  output_dir: outputs/llava_next_7b

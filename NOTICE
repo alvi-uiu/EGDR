@@ -1,0 +1,10 @@
+EGDR: Entropy-Gated Dynamic Rectification
+Copyright 2026 Riasad Alvi, Md. Asaduzzaman Shuvo, Md. Ahashan Habib,
+Md. Faiyaz Abdullah Sayeedi
+
+egdr/metrics/synonyms.txt is the COCO synonym list of the CHAIR metric of
+A. Rohrbach, L. A. Hendricks, K. Burns, T. Darrell and K. Saenko,
+"Object Hallucination in Image Captioning", EMNLP 2018.
+
+COCO images and annotations are downloaded at
+run time from https://cocodataset.org and are subject to the COCO terms of use.

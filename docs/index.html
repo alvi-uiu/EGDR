@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EGDR: Entropy-Gated Dynamic Rectification</title>
+  <meta name="description" content="Entropy-Gated Dynamic Rectification for Object Hallucination in Large Vision-Language Models. WACV 2027.">
+  <meta property="og:title" content="Entropy-Gated Dynamic Rectification for Object Hallucination in Large Vision-Language Models">
+  <meta property="og:description" content="EGDR lowers a latent-steering threshold when the preceding decoding step is uncertain. No extra forward pass, no trained parameter. WACV 2027.">
+  <meta property="og:image" content="https://alvi-uiu.github.io/EGDR/static/figures/overview.png">
+  <meta name="color-scheme" content="light">
+  <script>
+    // Light by default; apply a saved choice before first paint.
+    try {
+      var saved = localStorage.getItem("egdr-theme");
+      if (saved === "light" || saved === "dark") document.documentElement.setAttribute("data-theme", saved);
+    } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f6f6f7;
+      --text: #1b1b1f;
+      --muted: #5c5f66;
+      --line: #e4e4e7;
+      --strong-line: #c9c9cf;
+      --rule: #1b1b1f;
+      --row: #f1f1f3;
+      --nav: rgba(255, 255, 255, 0.78);
+      --frame: #ffffff;
+      --frame-line: #e4e4e7;
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    :root[data-theme="dark"] {
+      --bg: #0e0f11;
+      --surface: #16171a;
+      --text: #e8e8eb;
+      --muted: #9d9fa6;
+      --line: #26272c;
+      --strong-line: #3b3c42;
+      --rule: #6b6d74;
+      --row: #1b1c20;
+      --nav: rgba(14, 15, 17, 0.72);
+      --frame: #ffffff;
+      --frame-line: transparent;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    a { color: inherit; }
+    sub, sup { line-height: 0; }
+
+    /* Navigation */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--nav);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner { position: relative; max-width: 1040px; margin: 0 auto; padding: 0 56px; }
+    nav ul {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 4px 28px;
+      min-height: 52px; align-items: center;
+    }
+    nav a { text-decoration: none; font-size: 14px; color: var(--muted); padding: 4px 0; }
+    nav a:hover { color: var(--text); }
+    .theme-toggle {
+      position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+      width: 34px; height: 34px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent; color: var(--muted);
+      border: 1px solid var(--line); cursor: pointer;
+    }
+    .theme-toggle:hover { color: var(--text); border-color: var(--strong-line); }
+    .theme-toggle svg { width: 16px; height: 16px; }
+    .icon-sun { display: none; }
+    :root[data-theme="dark"] .icon-sun { display: block; }
+    :root[data-theme="dark"] .icon-moon { display: none; }
+
+    /* Layout */
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
+    .narrow { max-width: 780px; margin: 0 auto; }
+    section { padding: 72px 0 0; }
+    h2 {
+      font-family: var(--serif); font-weight: 600; font-size: 28px;
+      text-align: center; margin: 0 0 26px; letter-spacing: -0.005em;
+    }
+    h3 { font-size: 15px; font-weight: 600; text-align: center; margin: 48px 0 6px; }
+    .lead {
+      text-align: justify; text-align-last: center; hyphens: auto;
+      color: var(--muted); font-size: 14.5px;
+      max-width: 700px; margin: 0 auto 18px; line-height: 1.6;
+    }
+    p { margin: 0 0 16px; }
+
+    /* Header */
+    header { text-align: center; padding: 72px 0 0; }
+    .venue {
+      display: inline-block; font-size: 13px; letter-spacing: 0.06em;
+      color: var(--muted); border: 1px solid var(--line); border-radius: 999px;
+      padding: 5px 16px; margin-bottom: 26px;
+    }
+    h1 {
+      font-family: var(--serif); font-weight: 600;
+      font-size: clamp(28px, 4.2vw, 44px); line-height: 1.2;
+      letter-spacing: -0.01em; margin: 0 auto 26px; max-width: 900px;
+    }
+    .authors { font-size: 18px; margin: 0 0 6px; }
+    .authors span { white-space: nowrap; }
+    .authors span:not(:last-child)::after { content: ","; }
+    .affiliation { color: var(--muted); font-size: 15px; margin: 0 0 30px; }
+    .links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 14px; font-weight: 500; text-decoration: none;
+      color: var(--text); background: transparent;
+      border: 1px solid var(--strong-line); border-radius: 999px;
+      padding: 8px 20px; transition: background 0.15s, border-color 0.15s;
+    }
+    .btn:hover { background: var(--surface); border-color: var(--text); }
+    .btn svg { width: 15px; height: 15px; }
+
+    /* Figures: always on a white frame so they read the same in both themes */
+    figure { margin: 0 auto; text-align: center; }
+    .frame {
+      display: block; background: var(--frame); border: 1px solid var(--frame-line);
+      border-radius: 12px; padding: 14px;
+    }
+    .frame img { display: block; width: 100%; height: auto; margin: 0 auto; }
+    figcaption {
+      font-size: 14px; color: var(--muted); line-height: 1.6;
+      max-width: 760px; margin: 14px auto 0;
+      text-align: justify; text-align-last: center; hyphens: auto;
+    }
+    .teaser { max-width: 720px; margin-top: 44px; }
+    .fig-mid { max-width: 520px; }
+
+    /* Justified paragraphs; short centered blocks keep a centered last line */
+    .abstract, .facts { text-align: justify; hyphens: auto; }
+    .steps li { text-align: justify; hyphens: auto; }
+
+    /* Method steps */
+    .steps {
+      list-style: none; counter-reset: step; padding: 0;
+      max-width: 780px; margin: 36px auto 0;
+    }
+    .steps li {
+      counter-increment: step; position: relative;
+      padding: 0 0 18px 44px; margin: 0;
+    }
+    .steps li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 1px;
+      width: 28px; height: 28px; border-radius: 50%;
+      border: 1px solid var(--strong-line);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 600;
+    }
+    .steps b.title { font-weight: 600; }
+    .steps span.desc { color: var(--muted); }
+    .equation {
+      text-align: center; font-family: var(--serif); font-size: 22px;
+      margin: 18px auto 4px;
+    }
+    .eq-note { text-align: justify; text-align-last: center; hyphens: auto; color: var(--muted); font-size: 14px; margin: 0 auto; max-width: 640px; }
+
+    /* Tables */
+    .table-wrap { overflow-x: auto; margin: 0 auto; max-width: 100%; }
+    table {
+      border-collapse: collapse; margin: 0 auto; font-size: 14px;
+      font-variant-numeric: tabular-nums; min-width: 420px;
+    }
+    th, td { padding: 8px 14px; text-align: center; white-space: nowrap; }
+    th:first-child, td:first-child { text-align: left; }
+    thead th { font-weight: 600; border-bottom: 1px solid var(--rule); }
+    thead tr:first-child th { border-top: 1px solid var(--rule); }
+    thead tr.group th { border-bottom: 1px solid var(--line); font-weight: 500; color: var(--muted); }
+    tbody tr:last-child td { border-bottom: 1px solid var(--rule); }
+    tbody tr.sep td { border-top: 1px solid var(--line); }
+    tbody tr.ours td { background: var(--row); }
+    tbody tr.ours td:first-child { font-weight: 600; }
+    .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 8px; }
+    .pair table { min-width: 0; width: 100%; }
+
+    /* Citation */
+    .bibtex {
+      position: relative; max-width: 780px; margin: 0 auto;
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    }
+    .bibtex pre {
+      margin: 0; padding: 22px 24px; overflow-x: auto;
+      font-family: var(--mono); font-size: 13px; line-height: 1.6; text-align: left;
+    }
+    .copy {
+      position: absolute; top: 10px; right: 10px;
+      font-family: var(--sans); font-size: 12px; font-weight: 500;
+      background: var(--bg); color: var(--text);
+      border: 1px solid var(--strong-line); border-radius: 999px;
+      padding: 4px 12px; cursor: pointer;
+    }
+    .copy:hover { border-color: var(--text); }
+
+    footer {
+      text-align: center; font-size: 13px; color: var(--muted);
+      border-top: 1px solid var(--line); margin-top: 80px; padding: 28px 16px 40px;
+    }
+
+    @media (max-width: 760px) {
+      section { padding-top: 52px; }
+      header { padding-top: 44px; }
+      .nav-inner { padding: 0 52px 0 12px; }
+      nav ul { gap: 18px; justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+      nav ul::-webkit-scrollbar { display: none; }
+      nav li { flex: 0 0 auto; }
+      nav a { font-size: 13px; }
+      .theme-toggle { right: 10px; }
+      .venue { font-size: 11.5px; letter-spacing: 0.02em; padding: 5px 12px; white-space: nowrap; }
+      .authors { font-size: 16px; }
+      .equation { font-size: 19px; }
+      .frame { padding: 8px; border-radius: 10px; }
+      .pair { grid-template-columns: 1fr; }
+      th, td { padding: 7px 8px; }
+      table { font-size: 13px; }
+    }
+
+    @media (max-width: 480px) {
+      /* narrow columns justify with wide gaps; use natural alignment on phones */
+      .abstract, .facts, .steps li { text-align: left; }
+      .lead, figcaption, .eq-note { text-align: center; }
+      table { font-size: 11.5px; min-width: 0; }
+      th, td { padding: 6px 5px; }
+      thead th { white-space: normal; }
+    }
+  </style>
+</head>
+<body>
+
+<nav aria-label="Sections">
+  <div class="nav-inner">
+    <ul>
+      <li><a href="#abstract">Abstract</a></li>
+      <li><a href="#motivation">Motivation</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#qualitative">Qualitative</a></li>
+      <li><a href="#citation">Citation</a></li>
+    </ul>
+    <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <header>
+    <div class="venue">WACV 2027 Main Conference [ Algorithms Track ]</div>
+    <h1>Entropy-Gated Dynamic Rectification for Object Hallucination in Large Vision-Language Models</h1>
+    <p class="authors">
+      <span>Riasad Alvi<sup>1</sup></span> <span>Md. Asaduzzaman Shuvo<sup>1</sup></span> <span>Md. Ahashan Habib<sup>1</sup></span> <span>Md. Faiyaz Abdullah Sayeedi<sup>1,2</sup></span>
+    </p>
+    <p class="affiliation"><sup>1</sup>United International University, Bangladesh &nbsp;&nbsp; <sup>2</sup>BRAC University, Bangladesh</p>
+
+    <!-- Links -->
+    <div class="links">
+      <!-- Paper / Supplementary / arXiv: set href and remove the comment markers when the links exist.
+      <a class="btn" href="#" aria-label="Paper (PDF)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+        Paper
+      </a>
+      <a class="btn" href="#" aria-label="Supplementary material (PDF)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>
+        Supplementary
+      </a>
+      <a class="btn" href="#" aria-label="arXiv">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4l14 16M19 4L5 20"/></svg>
+        arXiv
+      </a>
+      -->
+      <a class="btn" href="https://github.com/alvi-uiu/EGDR" aria-label="Code">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
+        Code
+      </a>
+      <a class="btn" href="#citation" aria-label="BibTeX">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h12v16l-6-4-6 4z"/></svg>
+        BibTeX
+      </a>
+    </div>
+
+    <figure class="teaser">
+      <a class="frame" href="static/figures/overview.png" target="_blank" rel="noopener">
+        <img src="static/figures/overview.png" width="1305" height="1210"
+             alt="Overview of EGDR. (a) A static gate applies one constant threshold tau at every decoding step and still produces hallucinated objects. (b) EGDR lowers the threshold using the entropy of the preceding step's logits, corrects additional uncertain steps, and produces a grounded caption.">
+      </a>
+      <figcaption>
+        Both gates share the steering direction, depth and strength; only the threshold differs.
+        (a) A static gate applies one threshold &tau; at every step. (b) EGDR lowers it to
+        &tau;<sub>eff</sub>(t) using the entropy of the preceding step's logits. Hallucinated objects in red, grounded in green.
+      </figcaption>
+    </figure>
+  </header>
+
+  <section id="abstract">
+    <h2>Abstract</h2>
+    <div class="narrow abstract">
+      <p>
+        Large Vision-Language Models (LVLMs) routinely name objects that are absent from the image.
+        Latent steering can reduce this failure in one model forward pass, but a fixed gate treats early
+        and late decoding steps by the same criterion. We observe that predictive entropy varies sharply
+        within free-running generation, while states that commit to short answers occupy a narrow,
+        confident band. We exploit this temporal mismatch by using uncertainty as a causally available,
+        token-local control signal for an existing steering gate. We propose Entropy-Gated Dynamic
+        Rectification (EGDR), which lowers the intervention threshold when entropy derived from the
+        preceding step's already available logits is high and retains the calibrated operating point when
+        it is low. On LLaVA-1.5-7B, the underlying static gate lowers CHAIR C<sub>S</sub>/C<sub>I</sub>
+        from 53.00/15.30 to 32.00/14.30; replacing only its constant threshold with EGDR further lowers
+        them to 29.00/13.60. At a matched 58% intervention rate, the corresponding static control obtains
+        30.50/14.00. The gain over the static gate holds on LLaVA-NeXT-7B and grows with the generation
+        budget, while POPE scores and general multimodal capability remain effectively
+        unchanged. EGDR requires no additional model forward pass and adds roughly 2% measured latency.
+      </p>
+    </div>
+  </section>
+
+  <section id="motivation">
+    <h2>Why preceding-step entropy?</h2>
+    <div class="narrow facts">
+      <p>
+        States at which LLaVA-1.5 commits to a short answer occupy a narrow entropy band (0.008 to 0.059),
+        yet 71.6% of steps in 512-token captions lie above it. Hallucinations follow the same pattern:
+        the share of hallucinated object mentions rises from 3.2% in the first 32 tokens to 23.6% beyond
+        token 64, and from 7.3% after a confident step to 16.7% after the most uncertain ones.
+      </p>
+    </div>
+    <figure class="fig-mid">
+      <a class="frame" href="static/figures/halrate.png" target="_blank" rel="noopener">
+        <img src="static/figures/halrate.png" width="1510" height="904" loading="lazy"
+             alt="Heatmap of the share of hallucinated object mentions by decoding position (rows: tokens 1 to 32, 33 to 64, 65 and later) and preceding-step entropy (columns). Rates rise along both axes, reaching 32.7 percent for late, high-entropy steps.">
+      </a>
+      <figcaption>
+        Where object hallucinations occur (supplementary Fig. S2). Share of object mentions flagged by
+        CHAIR in unsteered LLaVA-1.5-7B captions of COCO val2014 images, by decoding
+        position and by the preceding-step entropy that the EGDR gate reads. Hallucinated objects are
+        preceded by higher entropy than grounded ones (median 0.144 vs. 0.099; one-sided Mann&ndash;Whitney <span style="white-space: nowrap">p &lt; 10<sup>&minus;5</sup>).</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="method">
+    <h2>Method</h2>
+    <figure>
+      <a class="frame" href="static/figures/pipeline.png" target="_blank" rel="noopener">
+        <img src="static/figures/pipeline.png" width="2166" height="794"
+             alt="Pipeline of EGDR. (a) Held-out calibration of depth, direction, threshold, entropy band, strength and modulation weight. (b) Entropy-gated decoding: the correction alpha v is injected when the risk exceeds the effective threshold. (c) The lowered threshold admits states missed by the static gate.">
+      </a>
+      <figcaption>
+        (a) Held-out calibration. (b) Entropy-gated decoding: the correction &alpha;<b>v</b> is injected when
+        R<sub>t</sub> &gt; &tau;<sub>eff</sub>(t). (c) The lowered threshold admits states the static gate misses.
+      </figcaption>
+    </figure>
+
+    <ol class="steps">
+      <li>
+        <b class="title">Calibrate once.</b>
+        <span class="desc">On a small held-out pool of COCO train2014 images with yes/no existence queries, select
+        the steering layer by validation F1, build a visual direction with the language prior projected out,
+        and set &tau; at the 80th percentile of risk on correctly answered queries.</span>
+      </li>
+      <li>
+        <b class="title">Read uncertainty.</b>
+        <span class="desc">At step t, the normalized entropy of the distribution produced at step t&minus;1 is
+        rescaled to the calibrated band [H<sub>lo</sub>, H<sub>hi</sub>], giving
+        <span style="white-space: nowrap">&ecirc;<sub>t</sub> &isin; [0, 1]</span>. These logits already exist,
+        so no forward pass is added.</span>
+      </li>
+      <li>
+        <b class="title">Gate the correction.</b>
+        <span class="desc">The fixed correction &alpha;<b>v</b> is injected only when the risk
+        R<sub>t</sub> = &minus;cos(<b>h</b><sub>t</sub>, <b>v</b>) exceeds the lowered threshold. Direction and
+        strength never change.</span>
+      </li>
+    </ol>
+
+    <p class="equation">
+      <i>&tau;</i><sub>eff</sub>(<i>t</i>) = <i>&tau;</i> &minus; <i>w</i><sub><i>&tau;</i></sub> &middot; <i>&ecirc;</i><sub><i>t</i></sub> &middot; |<i>&tau;</i>|
+    </p>
+    <p class="eq-note">Scaling by |&tau;| lowers the threshold for either sign of &tau;; with w<sub>&tau;</sub> = 0, EGDR is exactly the static gate.</p>
+  </section>
+
+  <section id="results">
+    <h2>Results</h2>
+
+    <h3>CHAIR on LLaVA-1.5-7B</h3>
+    <p class="lead">EGDR attains the lowest C<sub>S</sub> and C<sub>I</sub> with captions almost as long as the static gate's; VTI lowers C<sub>S</sub> largely by shortening captions.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Method</th><th>C<sub>S</sub> &darr;</th><th>C<sub>I</sub> &darr;</th><th>Length (words)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Regular</td><td>53.00</td><td>15.30</td><td>96.1</td></tr>
+          <tr><td>VCD</td><td>51.50</td><td>15.90</td><td>97.8</td></tr>
+          <tr><td>M3ID</td><td>49.50</td><td>14.00</td><td>94.2</td></tr>
+          <tr><td>ONLY</td><td>50.00</td><td>14.20</td><td>93.4</td></tr>
+          <tr><td>AGLA</td><td>50.50</td><td>13.90</td><td>95.0</td></tr>
+          <tr><td>VTI</td><td>36.00</td><td>15.60</td><td>78.3</td></tr>
+          <tr class="sep"><td>Static gate</td><td>32.00</td><td>14.30</td><td>88.4</td></tr>
+          <tr class="ours"><td>EGDR (ours)</td><td>29.00</td><td>13.60</td><td>87.6</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Isolating the gate</h3>
+    <p class="lead">A static gate lowered until it fires as often as EGDR recovers only part of the gain; the remaining margin comes from when the correction is applied.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Configuration</th><th>Gate open (% of steps)</th><th>C<sub>S</sub> &darr;</th><th>C<sub>I</sub> &darr;</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Static, calibrated &tau;</td><td>21.0</td><td>32.00</td><td>14.30</td></tr>
+          <tr><td>Static, matched firing rate</td><td>58.2</td><td>30.50</td><td>14.00</td></tr>
+          <tr class="ours"><td>EGDR (ours)</td><td>58.0</td><td>29.00</td><td>13.60</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Generation budget (tokens)</h3>
+    <p class="lead">With no preceding steps there is no signal, so the margin over the static gate grows with caption length on both backbones.</p>
+    <div class="pair">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr class="group"><th></th><th colspan="3">LLaVA-1.5-7B &middot; C<sub>S</sub> / C<sub>I</sub></th></tr>
+            <tr><th>Method</th><th>64</th><th>128</th><th>512</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Regular</td><td>22.00 / 9.00</td><td>38.00 / 12.20</td><td>53.00 / 15.30</td></tr>
+            <tr><td>Static gate</td><td>14.00 / 7.40</td><td>24.00 / 10.40</td><td>32.00 / 14.30</td></tr>
+            <tr class="ours"><td>EGDR</td><td>13.50 / 7.30</td><td>22.50 / 10.00</td><td>29.00 / 13.60</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr class="group"><th></th><th colspan="3">LLaVA-NeXT-7B &middot; C<sub>S</sub> / C<sub>I</sub></th></tr>
+            <tr><th>Method</th><th>64</th><th>128</th><th>512</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Regular</td><td>11.00 / 4.60</td><td>19.00 / 6.10</td><td>30.00 / 7.49</td></tr>
+            <tr><td>Static gate</td><td>9.00 / 4.00</td><td>16.00 / 5.20</td><td>26.00 / 6.32</td></tr>
+            <tr class="ours"><td>EGDR</td><td>8.80 / 3.95</td><td>15.20 / 5.05</td><td>24.50 / 6.05</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3>Discriminative accuracy and general capability</h3>
+    <p class="lead">Both gates share &tau; at the first token, so on POPE EGDR stays within 0.02 F1 of the static gate; MME and MM-Vet are preserved. Decoding costs 14.60 ms per token against 14.29 ms unsteered.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr class="group"><th></th><th colspan="3">POPE F1 &uarr;</th><th></th><th></th></tr>
+          <tr><th>Method</th><th>Random</th><th>Popular</th><th>Adversarial</th><th>MME &uarr;</th><th>MM-Vet &uarr;</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Regular</td><td>86.53</td><td>84.85</td><td>82.45</td><td>1754.33</td><td>31.10</td></tr>
+          <tr><td>VTI</td><td>86.19</td><td>84.01</td><td>80.93</td><td>1690.20</td><td>26.00</td></tr>
+          <tr class="sep"><td>Static gate</td><td>88.62</td><td>86.61</td><td>83.51</td><td>1787.27</td><td>33.53</td></tr>
+          <tr class="ours"><td>EGDR (ours)</td><td>88.64</td><td>86.63</td><td>83.49</td><td>1786.10</td><td>33.20</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="qualitative">
+    <h2>Qualitative example</h2>
+    <figure>
+      <a class="frame" href="static/figures/qualitative.png" target="_blank" rel="noopener">
+        <img src="static/figures/qualitative.png" width="2078" height="733" loading="lazy"
+             alt="Captions of a COCO val2014 street scene (ID 480140) from LLaVA-1.5-7B. Regular decoding invents a frisbee; the static gate invents backpacks; EGDR names neither.">
+      </a>
+      <figcaption>
+        LLaVA-1.5-7B, greedy decoding, 512 tokens. Hallucinated objects in red: the unsteered model invents a frisbee,
+        the static gate invents backpacks, and EGDR names neither.
+      </figcaption>
+    </figure>
+  </section>
+
+  <section id="citation">
+    <h2>Citation</h2>
+    <div class="bibtex">
+      <button class="copy" type="button" id="copy-bib">Copy</button>
+<pre id="bib">@inproceedings{alvi2027egdr,
+  title     = {Entropy-Gated Dynamic Rectification for Object Hallucination
+               in Large Vision-Language Models},
+  author    = {Alvi, Riasad and Shuvo, Md. Asaduzzaman and Habib, Md. Ahashan
+               and Sayeedi, Md. Faiyaz Abdullah},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications
+               of Computer Vision (WACV)},
+  year      = {2027}
+}</pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Entropy-Gated Dynamic Rectification &middot; WACV 2027
+</footer>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+        document.getElementById("theme-toggle").addEventListener("click", function () {
+      var current = root.getAttribute("data-theme") || "light";
+      var next = current === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("egdr-theme", next); } catch (e) {}
+    });
+
+    var button = document.getElementById("copy-bib");
+    var text = document.getElementById("bib").textContent;
+    button.addEventListener("click", function () {
+      var done = function () {
+        button.textContent = "Copied";
+        setTimeout(function () { button.textContent = "Copy"; }, 1600);
+      };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done);
+      } else {
+        var area = document.createElement("textarea");
+        area.value = text;
+        document.body.appendChild(area);
+        area.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(area);
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+\documentclass{article}
+\usepackage{times}\usepackage{amsmath,amssymb}\usepackage{graphicx}\usepackage{xcolor}
+\usepackage{tikz}\usetikzlibrary{shadows,positioning,calc,arrows.meta}
+\newsavebox\figbox
+\begin{document}
+\begin{lrbox}{\figbox}\input{f_overview.tex}\end{lrbox}
+\pdfpagewidth=\dimexpr\wd\figbox+8pt\relax
+\pdfpageheight=\dimexpr\ht\figbox+\dp\figbox+8pt\relax
+\hoffset=-1in \voffset=-1in \oddsidemargin=4pt \topmargin=4pt \headheight=0pt \headsep=0pt
+\parindent=0pt \pagestyle{empty}
+\noindent\usebox\figbox
+\end{document}

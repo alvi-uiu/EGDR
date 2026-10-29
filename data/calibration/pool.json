@@ -1,0 +1,4007 @@
+{
+  "split": "train2014",
+  "seed": 42,
+  "n_images": 100,
+  "queries": [
+    {
+      "uid": "cal_0",
+      "image_id": 443,
+      "image": "COCO_train2014_000000000443.jpg",
+      "object": "cat",
+      "text": "Is there a cat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_1",
+      "image_id": 443,
+      "image": "COCO_train2014_000000000443.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_2",
+      "image_id": 443,
+      "image": "COCO_train2014_000000000443.jpg",
+      "object": "couch",
+      "text": "Is there a couch in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_3",
+      "image_id": 443,
+      "image": "COCO_train2014_000000000443.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_4",
+      "image_id": 443,
+      "image": "COCO_train2014_000000000443.jpg",
+      "object": "dog",
+      "text": "Is there a dog in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_5",
+      "image_id": 902,
+      "image": "COCO_train2014_000000000902.jpg",
+      "object": "bowl",
+      "text": "Is there a bowl in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_6",
+      "image_id": 902,
+      "image": "COCO_train2014_000000000902.jpg",
+      "object": "apple",
+      "text": "Is there a apple in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_7",
+      "image_id": 902,
+      "image": "COCO_train2014_000000000902.jpg",
+      "object": "elephant",
+      "text": "Is there a elephant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_8",
+      "image_id": 902,
+      "image": "COCO_train2014_000000000902.jpg",
+      "object": "spoon",
+      "text": "Is there a spoon in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_9",
+      "image_id": 902,
+      "image": "COCO_train2014_000000000902.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_10",
+      "image_id": 1319,
+      "image": "COCO_train2014_000000001319.jpg",
+      "object": "cup",
+      "text": "Is there a cup in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_11",
+      "image_id": 1319,
+      "image": "COCO_train2014_000000001319.jpg",
+      "object": "cat",
+      "text": "Is there a cat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_12",
+      "image_id": 1319,
+      "image": "COCO_train2014_000000001319.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_13",
+      "image_id": 1319,
+      "image": "COCO_train2014_000000001319.jpg",
+      "object": "frisbee",
+      "text": "Is there a frisbee in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_14",
+      "image_id": 1319,
+      "image": "COCO_train2014_000000001319.jpg",
+      "object": "donut",
+      "text": "Is there a donut in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_15",
+      "image_id": 6421,
+      "image": "COCO_train2014_000000006421.jpg",
+      "object": "boat",
+      "text": "Is there a boat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_16",
+      "image_id": 6421,
+      "image": "COCO_train2014_000000006421.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_17",
+      "image_id": 6421,
+      "image": "COCO_train2014_000000006421.jpg",
+      "object": "toothbrush",
+      "text": "Is there a toothbrush in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_18",
+      "image_id": 6421,
+      "image": "COCO_train2014_000000006421.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_19",
+      "image_id": 6421,
+      "image": "COCO_train2014_000000006421.jpg",
+      "object": "dog",
+      "text": "Is there a dog in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_20",
+      "image_id": 13279,
+      "image": "COCO_train2014_000000013279.jpg",
+      "object": "traffic light",
+      "text": "Is there a traffic light in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_21",
+      "image_id": 13279,
+      "image": "COCO_train2014_000000013279.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_22",
+      "image_id": 13279,
+      "image": "COCO_train2014_000000013279.jpg",
+      "object": "truck",
+      "text": "Is there a truck in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_23",
+      "image_id": 13279,
+      "image": "COCO_train2014_000000013279.jpg",
+      "object": "boat",
+      "text": "Is there a boat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_24",
+      "image_id": 13279,
+      "image": "COCO_train2014_000000013279.jpg",
+      "object": "cake",
+      "text": "Is there a cake in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_25",
+      "image_id": 17205,
+      "image": "COCO_train2014_000000017205.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_26",
+      "image_id": 17205,
+      "image": "COCO_train2014_000000017205.jpg",
+      "object": "microwave",
+      "text": "Is there a microwave in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_27",
+      "image_id": 17205,
+      "image": "COCO_train2014_000000017205.jpg",
+      "object": "tv",
+      "text": "Is there a tv in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_28",
+      "image_id": 17205,
+      "image": "COCO_train2014_000000017205.jpg",
+      "object": "apple",
+      "text": "Is there a apple in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_29",
+      "image_id": 17205,
+      "image": "COCO_train2014_000000017205.jpg",
+      "object": "horse",
+      "text": "Is there a horse in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_30",
+      "image_id": 24231,
+      "image": "COCO_train2014_000000024231.jpg",
+      "object": "spoon",
+      "text": "Is there a spoon in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_31",
+      "image_id": 24231,
+      "image": "COCO_train2014_000000024231.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_32",
+      "image_id": 24231,
+      "image": "COCO_train2014_000000024231.jpg",
+      "object": "fork",
+      "text": "Is there a fork in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_33",
+      "image_id": 24231,
+      "image": "COCO_train2014_000000024231.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_34",
+      "image_id": 24231,
+      "image": "COCO_train2014_000000024231.jpg",
+      "object": "zebra",
+      "text": "Is there a zebra in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_35",
+      "image_id": 36022,
+      "image": "COCO_train2014_000000036022.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_36",
+      "image_id": 36022,
+      "image": "COCO_train2014_000000036022.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_37",
+      "image_id": 36022,
+      "image": "COCO_train2014_000000036022.jpg",
+      "object": "bus",
+      "text": "Is there a bus in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_38",
+      "image_id": 36022,
+      "image": "COCO_train2014_000000036022.jpg",
+      "object": "suitcase",
+      "text": "Is there a suitcase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_39",
+      "image_id": 36022,
+      "image": "COCO_train2014_000000036022.jpg",
+      "object": "sheep",
+      "text": "Is there a sheep in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_40",
+      "image_id": 37169,
+      "image": "COCO_train2014_000000037169.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_41",
+      "image_id": 37169,
+      "image": "COCO_train2014_000000037169.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_42",
+      "image_id": 37169,
+      "image": "COCO_train2014_000000037169.jpg",
+      "object": "bus",
+      "text": "Is there a bus in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_43",
+      "image_id": 37169,
+      "image": "COCO_train2014_000000037169.jpg",
+      "object": "refrigerator",
+      "text": "Is there a refrigerator in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_44",
+      "image_id": 37169,
+      "image": "COCO_train2014_000000037169.jpg",
+      "object": "keyboard",
+      "text": "Is there a keyboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_45",
+      "image_id": 37210,
+      "image": "COCO_train2014_000000037210.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_46",
+      "image_id": 37210,
+      "image": "COCO_train2014_000000037210.jpg",
+      "object": "spoon",
+      "text": "Is there a spoon in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_47",
+      "image_id": 37210,
+      "image": "COCO_train2014_000000037210.jpg",
+      "object": "microwave",
+      "text": "Is there a microwave in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_48",
+      "image_id": 37210,
+      "image": "COCO_train2014_000000037210.jpg",
+      "object": "laptop",
+      "text": "Is there a laptop in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_49",
+      "image_id": 37210,
+      "image": "COCO_train2014_000000037210.jpg",
+      "object": "cat",
+      "text": "Is there a cat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_50",
+      "image_id": 55135,
+      "image": "COCO_train2014_000000055135.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_51",
+      "image_id": 55135,
+      "image": "COCO_train2014_000000055135.jpg",
+      "object": "chair",
+      "text": "Is there a chair in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_52",
+      "image_id": 55135,
+      "image": "COCO_train2014_000000055135.jpg",
+      "object": "knife",
+      "text": "Is there a knife in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_53",
+      "image_id": 55135,
+      "image": "COCO_train2014_000000055135.jpg",
+      "object": "train",
+      "text": "Is there a train in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_54",
+      "image_id": 55135,
+      "image": "COCO_train2014_000000055135.jpg",
+      "object": "elephant",
+      "text": "Is there a elephant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_55",
+      "image_id": 56718,
+      "image": "COCO_train2014_000000056718.jpg",
+      "object": "chair",
+      "text": "Is there a chair in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_56",
+      "image_id": 56718,
+      "image": "COCO_train2014_000000056718.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_57",
+      "image_id": 56718,
+      "image": "COCO_train2014_000000056718.jpg",
+      "object": "snowboard",
+      "text": "Is there a snowboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_58",
+      "image_id": 56718,
+      "image": "COCO_train2014_000000056718.jpg",
+      "object": "knife",
+      "text": "Is there a knife in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_59",
+      "image_id": 56718,
+      "image": "COCO_train2014_000000056718.jpg",
+      "object": "banana",
+      "text": "Is there a banana in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_60",
+      "image_id": 77873,
+      "image": "COCO_train2014_000000077873.jpg",
+      "object": "hot dog",
+      "text": "Is there a hot dog in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_61",
+      "image_id": 77873,
+      "image": "COCO_train2014_000000077873.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_62",
+      "image_id": 77873,
+      "image": "COCO_train2014_000000077873.jpg",
+      "object": "truck",
+      "text": "Is there a truck in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_63",
+      "image_id": 77873,
+      "image": "COCO_train2014_000000077873.jpg",
+      "object": "carrot",
+      "text": "Is there a carrot in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_64",
+      "image_id": 77873,
+      "image": "COCO_train2014_000000077873.jpg",
+      "object": "spoon",
+      "text": "Is there a spoon in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_65",
+      "image_id": 78689,
+      "image": "COCO_train2014_000000078689.jpg",
+      "object": "cat",
+      "text": "Is there a cat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_66",
+      "image_id": 78689,
+      "image": "COCO_train2014_000000078689.jpg",
+      "object": "laptop",
+      "text": "Is there a laptop in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_67",
+      "image_id": 78689,
+      "image": "COCO_train2014_000000078689.jpg",
+      "object": "snowboard",
+      "text": "Is there a snowboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_68",
+      "image_id": 78689,
+      "image": "COCO_train2014_000000078689.jpg",
+      "object": "traffic light",
+      "text": "Is there a traffic light in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_69",
+      "image_id": 78689,
+      "image": "COCO_train2014_000000078689.jpg",
+      "object": "train",
+      "text": "Is there a train in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_70",
+      "image_id": 88835,
+      "image": "COCO_train2014_000000088835.jpg",
+      "object": "traffic light",
+      "text": "Is there a traffic light in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_71",
+      "image_id": 88835,
+      "image": "COCO_train2014_000000088835.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_72",
+      "image_id": 88835,
+      "image": "COCO_train2014_000000088835.jpg",
+      "object": "truck",
+      "text": "Is there a truck in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_73",
+      "image_id": 88835,
+      "image": "COCO_train2014_000000088835.jpg",
+      "object": "bus",
+      "text": "Is there a bus in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_74",
+      "image_id": 88835,
+      "image": "COCO_train2014_000000088835.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_75",
+      "image_id": 102469,
+      "image": "COCO_train2014_000000102469.jpg",
+      "object": "fork",
+      "text": "Is there a fork in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_76",
+      "image_id": 102469,
+      "image": "COCO_train2014_000000102469.jpg",
+      "object": "knife",
+      "text": "Is there a knife in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_77",
+      "image_id": 102469,
+      "image": "COCO_train2014_000000102469.jpg",
+      "object": "vase",
+      "text": "Is there a vase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_78",
+      "image_id": 102469,
+      "image": "COCO_train2014_000000102469.jpg",
+      "object": "baseball bat",
+      "text": "Is there a baseball bat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_79",
+      "image_id": 102469,
+      "image": "COCO_train2014_000000102469.jpg",
+      "object": "donut",
+      "text": "Is there a donut in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_80",
+      "image_id": 103231,
+      "image": "COCO_train2014_000000103231.jpg",
+      "object": "sink",
+      "text": "Is there a sink in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_81",
+      "image_id": 103231,
+      "image": "COCO_train2014_000000103231.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_82",
+      "image_id": 103231,
+      "image": "COCO_train2014_000000103231.jpg",
+      "object": "oven",
+      "text": "Is there a oven in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_83",
+      "image_id": 103231,
+      "image": "COCO_train2014_000000103231.jpg",
+      "object": "toaster",
+      "text": "Is there a toaster in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_84",
+      "image_id": 103231,
+      "image": "COCO_train2014_000000103231.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_85",
+      "image_id": 123975,
+      "image": "COCO_train2014_000000123975.jpg",
+      "object": "truck",
+      "text": "Is there a truck in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_86",
+      "image_id": 123975,
+      "image": "COCO_train2014_000000123975.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_87",
+      "image_id": 123975,
+      "image": "COCO_train2014_000000123975.jpg",
+      "object": "boat",
+      "text": "Is there a boat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_88",
+      "image_id": 123975,
+      "image": "COCO_train2014_000000123975.jpg",
+      "object": "refrigerator",
+      "text": "Is there a refrigerator in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_89",
+      "image_id": 123975,
+      "image": "COCO_train2014_000000123975.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_90",
+      "image_id": 133730,
+      "image": "COCO_train2014_000000133730.jpg",
+      "object": "baseball bat",
+      "text": "Is there a baseball bat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_91",
+      "image_id": 133730,
+      "image": "COCO_train2014_000000133730.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_92",
+      "image_id": 133730,
+      "image": "COCO_train2014_000000133730.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_93",
+      "image_id": 133730,
+      "image": "COCO_train2014_000000133730.jpg",
+      "object": "zebra",
+      "text": "Is there a zebra in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_94",
+      "image_id": 133730,
+      "image": "COCO_train2014_000000133730.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_95",
+      "image_id": 134648,
+      "image": "COCO_train2014_000000134648.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_96",
+      "image_id": 134648,
+      "image": "COCO_train2014_000000134648.jpg",
+      "object": "skis",
+      "text": "Is there a skis in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_97",
+      "image_id": 134648,
+      "image": "COCO_train2014_000000134648.jpg",
+      "object": "mouse",
+      "text": "Is there a mouse in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_98",
+      "image_id": 134648,
+      "image": "COCO_train2014_000000134648.jpg",
+      "object": "oven",
+      "text": "Is there a oven in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_99",
+      "image_id": 134648,
+      "image": "COCO_train2014_000000134648.jpg",
+      "object": "boat",
+      "text": "Is there a boat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_100",
+      "image_id": 143096,
+      "image": "COCO_train2014_000000143096.jpg",
+      "object": "fork",
+      "text": "Is there a fork in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_101",
+      "image_id": 143096,
+      "image": "COCO_train2014_000000143096.jpg",
+      "object": "apple",
+      "text": "Is there a apple in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_102",
+      "image_id": 143096,
+      "image": "COCO_train2014_000000143096.jpg",
+      "object": "carrot",
+      "text": "Is there a carrot in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_103",
+      "image_id": 143096,
+      "image": "COCO_train2014_000000143096.jpg",
+      "object": "mouse",
+      "text": "Is there a mouse in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_104",
+      "image_id": 143096,
+      "image": "COCO_train2014_000000143096.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_105",
+      "image_id": 158729,
+      "image": "COCO_train2014_000000158729.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_106",
+      "image_id": 158729,
+      "image": "COCO_train2014_000000158729.jpg",
+      "object": "traffic light",
+      "text": "Is there a traffic light in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_107",
+      "image_id": 158729,
+      "image": "COCO_train2014_000000158729.jpg",
+      "object": "sink",
+      "text": "Is there a sink in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_108",
+      "image_id": 158729,
+      "image": "COCO_train2014_000000158729.jpg",
+      "object": "toaster",
+      "text": "Is there a toaster in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_109",
+      "image_id": 158729,
+      "image": "COCO_train2014_000000158729.jpg",
+      "object": "remote",
+      "text": "Is there a remote in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_110",
+      "image_id": 162646,
+      "image": "COCO_train2014_000000162646.jpg",
+      "object": "orange",
+      "text": "Is there a orange in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_111",
+      "image_id": 162646,
+      "image": "COCO_train2014_000000162646.jpg",
+      "object": "broccoli",
+      "text": "Is there a broccoli in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_112",
+      "image_id": 162646,
+      "image": "COCO_train2014_000000162646.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_113",
+      "image_id": 162646,
+      "image": "COCO_train2014_000000162646.jpg",
+      "object": "spoon",
+      "text": "Is there a spoon in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_114",
+      "image_id": 162646,
+      "image": "COCO_train2014_000000162646.jpg",
+      "object": "elephant",
+      "text": "Is there a elephant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_115",
+      "image_id": 171053,
+      "image": "COCO_train2014_000000171053.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_116",
+      "image_id": 171053,
+      "image": "COCO_train2014_000000171053.jpg",
+      "object": "cell phone",
+      "text": "Is there a cell phone in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_117",
+      "image_id": 171053,
+      "image": "COCO_train2014_000000171053.jpg",
+      "object": "sink",
+      "text": "Is there a sink in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_118",
+      "image_id": 171053,
+      "image": "COCO_train2014_000000171053.jpg",
+      "object": "suitcase",
+      "text": "Is there a suitcase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_119",
+      "image_id": 171053,
+      "image": "COCO_train2014_000000171053.jpg",
+      "object": "boat",
+      "text": "Is there a boat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_120",
+      "image_id": 182416,
+      "image": "COCO_train2014_000000182416.jpg",
+      "object": "fire hydrant",
+      "text": "Is there a fire hydrant in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_121",
+      "image_id": 182416,
+      "image": "COCO_train2014_000000182416.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_122",
+      "image_id": 182416,
+      "image": "COCO_train2014_000000182416.jpg",
+      "object": "bus",
+      "text": "Is there a bus in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_123",
+      "image_id": 182416,
+      "image": "COCO_train2014_000000182416.jpg",
+      "object": "cat",
+      "text": "Is there a cat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_124",
+      "image_id": 182416,
+      "image": "COCO_train2014_000000182416.jpg",
+      "object": "umbrella",
+      "text": "Is there a umbrella in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_125",
+      "image_id": 200464,
+      "image": "COCO_train2014_000000200464.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_126",
+      "image_id": 200464,
+      "image": "COCO_train2014_000000200464.jpg",
+      "object": "frisbee",
+      "text": "Is there a frisbee in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_127",
+      "image_id": 200464,
+      "image": "COCO_train2014_000000200464.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_128",
+      "image_id": 200464,
+      "image": "COCO_train2014_000000200464.jpg",
+      "object": "airplane",
+      "text": "Is there a airplane in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_129",
+      "image_id": 200464,
+      "image": "COCO_train2014_000000200464.jpg",
+      "object": "elephant",
+      "text": "Is there a elephant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_130",
+      "image_id": 203429,
+      "image": "COCO_train2014_000000203429.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_131",
+      "image_id": 203429,
+      "image": "COCO_train2014_000000203429.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_132",
+      "image_id": 203429,
+      "image": "COCO_train2014_000000203429.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_133",
+      "image_id": 203429,
+      "image": "COCO_train2014_000000203429.jpg",
+      "object": "carrot",
+      "text": "Is there a carrot in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_134",
+      "image_id": 203429,
+      "image": "COCO_train2014_000000203429.jpg",
+      "object": "stop sign",
+      "text": "Is there a stop sign in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_135",
+      "image_id": 216279,
+      "image": "COCO_train2014_000000216279.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_136",
+      "image_id": 216279,
+      "image": "COCO_train2014_000000216279.jpg",
+      "object": "hot dog",
+      "text": "Is there a hot dog in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_137",
+      "image_id": 216279,
+      "image": "COCO_train2014_000000216279.jpg",
+      "object": "carrot",
+      "text": "Is there a carrot in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_138",
+      "image_id": 216279,
+      "image": "COCO_train2014_000000216279.jpg",
+      "object": "bottle",
+      "text": "Is there a bottle in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_139",
+      "image_id": 216279,
+      "image": "COCO_train2014_000000216279.jpg",
+      "object": "laptop",
+      "text": "Is there a laptop in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_140",
+      "image_id": 217186,
+      "image": "COCO_train2014_000000217186.jpg",
+      "object": "clock",
+      "text": "Is there a clock in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_141",
+      "image_id": 217186,
+      "image": "COCO_train2014_000000217186.jpg",
+      "object": "dog",
+      "text": "Is there a dog in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_142",
+      "image_id": 217186,
+      "image": "COCO_train2014_000000217186.jpg",
+      "object": "couch",
+      "text": "Is there a couch in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_143",
+      "image_id": 217186,
+      "image": "COCO_train2014_000000217186.jpg",
+      "object": "hair drier",
+      "text": "Is there a hair drier in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_144",
+      "image_id": 217186,
+      "image": "COCO_train2014_000000217186.jpg",
+      "object": "stop sign",
+      "text": "Is there a stop sign in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_145",
+      "image_id": 218242,
+      "image": "COCO_train2014_000000218242.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_146",
+      "image_id": 218242,
+      "image": "COCO_train2014_000000218242.jpg",
+      "object": "elephant",
+      "text": "Is there a elephant in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_147",
+      "image_id": 218242,
+      "image": "COCO_train2014_000000218242.jpg",
+      "object": "umbrella",
+      "text": "Is there a umbrella in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_148",
+      "image_id": 218242,
+      "image": "COCO_train2014_000000218242.jpg",
+      "object": "scissors",
+      "text": "Is there a scissors in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_149",
+      "image_id": 218242,
+      "image": "COCO_train2014_000000218242.jpg",
+      "object": "donut",
+      "text": "Is there a donut in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_150",
+      "image_id": 222367,
+      "image": "COCO_train2014_000000222367.jpg",
+      "object": "keyboard",
+      "text": "Is there a keyboard in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_151",
+      "image_id": 222367,
+      "image": "COCO_train2014_000000222367.jpg",
+      "object": "tv",
+      "text": "Is there a tv in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_152",
+      "image_id": 222367,
+      "image": "COCO_train2014_000000222367.jpg",
+      "object": "cup",
+      "text": "Is there a cup in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_153",
+      "image_id": 222367,
+      "image": "COCO_train2014_000000222367.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_154",
+      "image_id": 222367,
+      "image": "COCO_train2014_000000222367.jpg",
+      "object": "knife",
+      "text": "Is there a knife in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_155",
+      "image_id": 222694,
+      "image": "COCO_train2014_000000222694.jpg",
+      "object": "bench",
+      "text": "Is there a bench in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_156",
+      "image_id": 222694,
+      "image": "COCO_train2014_000000222694.jpg",
+      "object": "bicycle",
+      "text": "Is there a bicycle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_157",
+      "image_id": 222694,
+      "image": "COCO_train2014_000000222694.jpg",
+      "object": "umbrella",
+      "text": "Is there a umbrella in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_158",
+      "image_id": 222694,
+      "image": "COCO_train2014_000000222694.jpg",
+      "object": "vase",
+      "text": "Is there a vase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_159",
+      "image_id": 222694,
+      "image": "COCO_train2014_000000222694.jpg",
+      "object": "parking meter",
+      "text": "Is there a parking meter in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_160",
+      "image_id": 233926,
+      "image": "COCO_train2014_000000233926.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_161",
+      "image_id": 233926,
+      "image": "COCO_train2014_000000233926.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_162",
+      "image_id": 233926,
+      "image": "COCO_train2014_000000233926.jpg",
+      "object": "bear",
+      "text": "Is there a bear in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_163",
+      "image_id": 233926,
+      "image": "COCO_train2014_000000233926.jpg",
+      "object": "parking meter",
+      "text": "Is there a parking meter in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_164",
+      "image_id": 233926,
+      "image": "COCO_train2014_000000233926.jpg",
+      "object": "skateboard",
+      "text": "Is there a skateboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_165",
+      "image_id": 235276,
+      "image": "COCO_train2014_000000235276.jpg",
+      "object": "stop sign",
+      "text": "Is there a stop sign in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_166",
+      "image_id": 235276,
+      "image": "COCO_train2014_000000235276.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_167",
+      "image_id": 235276,
+      "image": "COCO_train2014_000000235276.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_168",
+      "image_id": 235276,
+      "image": "COCO_train2014_000000235276.jpg",
+      "object": "bird",
+      "text": "Is there a bird in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_169",
+      "image_id": 235276,
+      "image": "COCO_train2014_000000235276.jpg",
+      "object": "sports ball",
+      "text": "Is there a sports ball in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_170",
+      "image_id": 240490,
+      "image": "COCO_train2014_000000240490.jpg",
+      "object": "baseball bat",
+      "text": "Is there a baseball bat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_171",
+      "image_id": 240490,
+      "image": "COCO_train2014_000000240490.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_172",
+      "image_id": 240490,
+      "image": "COCO_train2014_000000240490.jpg",
+      "object": "sports ball",
+      "text": "Is there a sports ball in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_173",
+      "image_id": 240490,
+      "image": "COCO_train2014_000000240490.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_174",
+      "image_id": 240490,
+      "image": "COCO_train2014_000000240490.jpg",
+      "object": "bed",
+      "text": "Is there a bed in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_175",
+      "image_id": 242755,
+      "image": "COCO_train2014_000000242755.jpg",
+      "object": "cake",
+      "text": "Is there a cake in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_176",
+      "image_id": 242755,
+      "image": "COCO_train2014_000000242755.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_177",
+      "image_id": 242755,
+      "image": "COCO_train2014_000000242755.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_178",
+      "image_id": 242755,
+      "image": "COCO_train2014_000000242755.jpg",
+      "object": "carrot",
+      "text": "Is there a carrot in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_179",
+      "image_id": 242755,
+      "image": "COCO_train2014_000000242755.jpg",
+      "object": "sports ball",
+      "text": "Is there a sports ball in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_180",
+      "image_id": 249531,
+      "image": "COCO_train2014_000000249531.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_181",
+      "image_id": 249531,
+      "image": "COCO_train2014_000000249531.jpg",
+      "object": "sports ball",
+      "text": "Is there a sports ball in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_182",
+      "image_id": 249531,
+      "image": "COCO_train2014_000000249531.jpg",
+      "object": "tennis racket",
+      "text": "Is there a tennis racket in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_183",
+      "image_id": 249531,
+      "image": "COCO_train2014_000000249531.jpg",
+      "object": "dog",
+      "text": "Is there a dog in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_184",
+      "image_id": 249531,
+      "image": "COCO_train2014_000000249531.jpg",
+      "object": "cell phone",
+      "text": "Is there a cell phone in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_185",
+      "image_id": 264005,
+      "image": "COCO_train2014_000000264005.jpg",
+      "object": "bottle",
+      "text": "Is there a bottle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_186",
+      "image_id": 264005,
+      "image": "COCO_train2014_000000264005.jpg",
+      "object": "potted plant",
+      "text": "Is there a potted plant in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_187",
+      "image_id": 264005,
+      "image": "COCO_train2014_000000264005.jpg",
+      "object": "scissors",
+      "text": "Is there a scissors in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_188",
+      "image_id": 264005,
+      "image": "COCO_train2014_000000264005.jpg",
+      "object": "surfboard",
+      "text": "Is there a surfboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_189",
+      "image_id": 264005,
+      "image": "COCO_train2014_000000264005.jpg",
+      "object": "elephant",
+      "text": "Is there a elephant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_190",
+      "image_id": 276854,
+      "image": "COCO_train2014_000000276854.jpg",
+      "object": "sports ball",
+      "text": "Is there a sports ball in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_191",
+      "image_id": 276854,
+      "image": "COCO_train2014_000000276854.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_192",
+      "image_id": 276854,
+      "image": "COCO_train2014_000000276854.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_193",
+      "image_id": 276854,
+      "image": "COCO_train2014_000000276854.jpg",
+      "object": "elephant",
+      "text": "Is there a elephant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_194",
+      "image_id": 276854,
+      "image": "COCO_train2014_000000276854.jpg",
+      "object": "kite",
+      "text": "Is there a kite in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_195",
+      "image_id": 285132,
+      "image": "COCO_train2014_000000285132.jpg",
+      "object": "truck",
+      "text": "Is there a truck in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_196",
+      "image_id": 285132,
+      "image": "COCO_train2014_000000285132.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_197",
+      "image_id": 285132,
+      "image": "COCO_train2014_000000285132.jpg",
+      "object": "hair drier",
+      "text": "Is there a hair drier in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_198",
+      "image_id": 285132,
+      "image": "COCO_train2014_000000285132.jpg",
+      "object": "vase",
+      "text": "Is there a vase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_199",
+      "image_id": 285132,
+      "image": "COCO_train2014_000000285132.jpg",
+      "object": "dog",
+      "text": "Is there a dog in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_200",
+      "image_id": 288450,
+      "image": "COCO_train2014_000000288450.jpg",
+      "object": "traffic light",
+      "text": "Is there a traffic light in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_201",
+      "image_id": 288450,
+      "image": "COCO_train2014_000000288450.jpg",
+      "object": "cat",
+      "text": "Is there a cat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_202",
+      "image_id": 288450,
+      "image": "COCO_train2014_000000288450.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_203",
+      "image_id": 288450,
+      "image": "COCO_train2014_000000288450.jpg",
+      "object": "sandwich",
+      "text": "Is there a sandwich in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_204",
+      "image_id": 288450,
+      "image": "COCO_train2014_000000288450.jpg",
+      "object": "airplane",
+      "text": "Is there a airplane in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_205",
+      "image_id": 289698,
+      "image": "COCO_train2014_000000289698.jpg",
+      "object": "bowl",
+      "text": "Is there a bowl in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_206",
+      "image_id": 289698,
+      "image": "COCO_train2014_000000289698.jpg",
+      "object": "microwave",
+      "text": "Is there a microwave in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_207",
+      "image_id": 289698,
+      "image": "COCO_train2014_000000289698.jpg",
+      "object": "bus",
+      "text": "Is there a bus in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_208",
+      "image_id": 289698,
+      "image": "COCO_train2014_000000289698.jpg",
+      "object": "baseball bat",
+      "text": "Is there a baseball bat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_209",
+      "image_id": 289698,
+      "image": "COCO_train2014_000000289698.jpg",
+      "object": "apple",
+      "text": "Is there a apple in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_210",
+      "image_id": 300721,
+      "image": "COCO_train2014_000000300721.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_211",
+      "image_id": 300721,
+      "image": "COCO_train2014_000000300721.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_212",
+      "image_id": 300721,
+      "image": "COCO_train2014_000000300721.jpg",
+      "object": "cake",
+      "text": "Is there a cake in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_213",
+      "image_id": 300721,
+      "image": "COCO_train2014_000000300721.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_214",
+      "image_id": 300721,
+      "image": "COCO_train2014_000000300721.jpg",
+      "object": "skateboard",
+      "text": "Is there a skateboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_215",
+      "image_id": 300772,
+      "image": "COCO_train2014_000000300772.jpg",
+      "object": "bench",
+      "text": "Is there a bench in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_216",
+      "image_id": 300772,
+      "image": "COCO_train2014_000000300772.jpg",
+      "object": "sports ball",
+      "text": "Is there a sports ball in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_217",
+      "image_id": 300772,
+      "image": "COCO_train2014_000000300772.jpg",
+      "object": "sheep",
+      "text": "Is there a sheep in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_218",
+      "image_id": 300772,
+      "image": "COCO_train2014_000000300772.jpg",
+      "object": "laptop",
+      "text": "Is there a laptop in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_219",
+      "image_id": 300772,
+      "image": "COCO_train2014_000000300772.jpg",
+      "object": "knife",
+      "text": "Is there a knife in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_220",
+      "image_id": 310981,
+      "image": "COCO_train2014_000000310981.jpg",
+      "object": "frisbee",
+      "text": "Is there a frisbee in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_221",
+      "image_id": 310981,
+      "image": "COCO_train2014_000000310981.jpg",
+      "object": "bench",
+      "text": "Is there a bench in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_222",
+      "image_id": 310981,
+      "image": "COCO_train2014_000000310981.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_223",
+      "image_id": 310981,
+      "image": "COCO_train2014_000000310981.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_224",
+      "image_id": 310981,
+      "image": "COCO_train2014_000000310981.jpg",
+      "object": "oven",
+      "text": "Is there a oven in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_225",
+      "image_id": 313648,
+      "image": "COCO_train2014_000000313648.jpg",
+      "object": "toothbrush",
+      "text": "Is there a toothbrush in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_226",
+      "image_id": 313648,
+      "image": "COCO_train2014_000000313648.jpg",
+      "object": "tv",
+      "text": "Is there a tv in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_227",
+      "image_id": 313648,
+      "image": "COCO_train2014_000000313648.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_228",
+      "image_id": 313648,
+      "image": "COCO_train2014_000000313648.jpg",
+      "object": "boat",
+      "text": "Is there a boat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_229",
+      "image_id": 313648,
+      "image": "COCO_train2014_000000313648.jpg",
+      "object": "stop sign",
+      "text": "Is there a stop sign in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_230",
+      "image_id": 332013,
+      "image": "COCO_train2014_000000332013.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_231",
+      "image_id": 332013,
+      "image": "COCO_train2014_000000332013.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_232",
+      "image_id": 332013,
+      "image": "COCO_train2014_000000332013.jpg",
+      "object": "sports ball",
+      "text": "Is there a sports ball in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_233",
+      "image_id": 332013,
+      "image": "COCO_train2014_000000332013.jpg",
+      "object": "zebra",
+      "text": "Is there a zebra in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_234",
+      "image_id": 332013,
+      "image": "COCO_train2014_000000332013.jpg",
+      "object": "cup",
+      "text": "Is there a cup in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_235",
+      "image_id": 337994,
+      "image": "COCO_train2014_000000337994.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_236",
+      "image_id": 337994,
+      "image": "COCO_train2014_000000337994.jpg",
+      "object": "cake",
+      "text": "Is there a cake in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_237",
+      "image_id": 337994,
+      "image": "COCO_train2014_000000337994.jpg",
+      "object": "skateboard",
+      "text": "Is there a skateboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_238",
+      "image_id": 337994,
+      "image": "COCO_train2014_000000337994.jpg",
+      "object": "knife",
+      "text": "Is there a knife in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_239",
+      "image_id": 337994,
+      "image": "COCO_train2014_000000337994.jpg",
+      "object": "potted plant",
+      "text": "Is there a potted plant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_240",
+      "image_id": 349472,
+      "image": "COCO_train2014_000000349472.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_241",
+      "image_id": 349472,
+      "image": "COCO_train2014_000000349472.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_242",
+      "image_id": 349472,
+      "image": "COCO_train2014_000000349472.jpg",
+      "object": "chair",
+      "text": "Is there a chair in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_243",
+      "image_id": 349472,
+      "image": "COCO_train2014_000000349472.jpg",
+      "object": "oven",
+      "text": "Is there a oven in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_244",
+      "image_id": 349472,
+      "image": "COCO_train2014_000000349472.jpg",
+      "object": "teddy bear",
+      "text": "Is there a teddy bear in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_245",
+      "image_id": 354248,
+      "image": "COCO_train2014_000000354248.jpg",
+      "object": "chair",
+      "text": "Is there a chair in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_246",
+      "image_id": 354248,
+      "image": "COCO_train2014_000000354248.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_247",
+      "image_id": 354248,
+      "image": "COCO_train2014_000000354248.jpg",
+      "object": "horse",
+      "text": "Is there a horse in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_248",
+      "image_id": 354248,
+      "image": "COCO_train2014_000000354248.jpg",
+      "object": "sink",
+      "text": "Is there a sink in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_249",
+      "image_id": 354248,
+      "image": "COCO_train2014_000000354248.jpg",
+      "object": "skis",
+      "text": "Is there a skis in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_250",
+      "image_id": 354429,
+      "image": "COCO_train2014_000000354429.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_251",
+      "image_id": 354429,
+      "image": "COCO_train2014_000000354429.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_252",
+      "image_id": 354429,
+      "image": "COCO_train2014_000000354429.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_253",
+      "image_id": 354429,
+      "image": "COCO_train2014_000000354429.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_254",
+      "image_id": 354429,
+      "image": "COCO_train2014_000000354429.jpg",
+      "object": "donut",
+      "text": "Is there a donut in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_255",
+      "image_id": 355863,
+      "image": "COCO_train2014_000000355863.jpg",
+      "object": "cup",
+      "text": "Is there a cup in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_256",
+      "image_id": 355863,
+      "image": "COCO_train2014_000000355863.jpg",
+      "object": "keyboard",
+      "text": "Is there a keyboard in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_257",
+      "image_id": 355863,
+      "image": "COCO_train2014_000000355863.jpg",
+      "object": "stop sign",
+      "text": "Is there a stop sign in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_258",
+      "image_id": 355863,
+      "image": "COCO_train2014_000000355863.jpg",
+      "object": "wine glass",
+      "text": "Is there a wine glass in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_259",
+      "image_id": 355863,
+      "image": "COCO_train2014_000000355863.jpg",
+      "object": "bed",
+      "text": "Is there a bed in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_260",
+      "image_id": 359439,
+      "image": "COCO_train2014_000000359439.jpg",
+      "object": "spoon",
+      "text": "Is there a spoon in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_261",
+      "image_id": 359439,
+      "image": "COCO_train2014_000000359439.jpg",
+      "object": "cup",
+      "text": "Is there a cup in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_262",
+      "image_id": 359439,
+      "image": "COCO_train2014_000000359439.jpg",
+      "object": "carrot",
+      "text": "Is there a carrot in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_263",
+      "image_id": 359439,
+      "image": "COCO_train2014_000000359439.jpg",
+      "object": "tennis racket",
+      "text": "Is there a tennis racket in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_264",
+      "image_id": 359439,
+      "image": "COCO_train2014_000000359439.jpg",
+      "object": "umbrella",
+      "text": "Is there a umbrella in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_265",
+      "image_id": 370868,
+      "image": "COCO_train2014_000000370868.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_266",
+      "image_id": 370868,
+      "image": "COCO_train2014_000000370868.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_267",
+      "image_id": 370868,
+      "image": "COCO_train2014_000000370868.jpg",
+      "object": "mouse",
+      "text": "Is there a mouse in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_268",
+      "image_id": 370868,
+      "image": "COCO_train2014_000000370868.jpg",
+      "object": "remote",
+      "text": "Is there a remote in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_269",
+      "image_id": 370868,
+      "image": "COCO_train2014_000000370868.jpg",
+      "object": "skis",
+      "text": "Is there a skis in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_270",
+      "image_id": 371201,
+      "image": "COCO_train2014_000000371201.jpg",
+      "object": "bottle",
+      "text": "Is there a bottle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_271",
+      "image_id": 371201,
+      "image": "COCO_train2014_000000371201.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_272",
+      "image_id": 371201,
+      "image": "COCO_train2014_000000371201.jpg",
+      "object": "bench",
+      "text": "Is there a bench in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_273",
+      "image_id": 371201,
+      "image": "COCO_train2014_000000371201.jpg",
+      "object": "sports ball",
+      "text": "Is there a sports ball in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_274",
+      "image_id": 371201,
+      "image": "COCO_train2014_000000371201.jpg",
+      "object": "tv",
+      "text": "Is there a tv in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_275",
+      "image_id": 372130,
+      "image": "COCO_train2014_000000372130.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_276",
+      "image_id": 372130,
+      "image": "COCO_train2014_000000372130.jpg",
+      "object": "suitcase",
+      "text": "Is there a suitcase in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_277",
+      "image_id": 372130,
+      "image": "COCO_train2014_000000372130.jpg",
+      "object": "snowboard",
+      "text": "Is there a snowboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_278",
+      "image_id": 372130,
+      "image": "COCO_train2014_000000372130.jpg",
+      "object": "skis",
+      "text": "Is there a skis in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_279",
+      "image_id": 372130,
+      "image": "COCO_train2014_000000372130.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_280",
+      "image_id": 374924,
+      "image": "COCO_train2014_000000374924.jpg",
+      "object": "sports ball",
+      "text": "Is there a sports ball in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_281",
+      "image_id": 374924,
+      "image": "COCO_train2014_000000374924.jpg",
+      "object": "baseball bat",
+      "text": "Is there a baseball bat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_282",
+      "image_id": 374924,
+      "image": "COCO_train2014_000000374924.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_283",
+      "image_id": 374924,
+      "image": "COCO_train2014_000000374924.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_284",
+      "image_id": 374924,
+      "image": "COCO_train2014_000000374924.jpg",
+      "object": "fork",
+      "text": "Is there a fork in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_285",
+      "image_id": 379093,
+      "image": "COCO_train2014_000000379093.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_286",
+      "image_id": 379093,
+      "image": "COCO_train2014_000000379093.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_287",
+      "image_id": 379093,
+      "image": "COCO_train2014_000000379093.jpg",
+      "object": "bed",
+      "text": "Is there a bed in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_288",
+      "image_id": 379093,
+      "image": "COCO_train2014_000000379093.jpg",
+      "object": "sandwich",
+      "text": "Is there a sandwich in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_289",
+      "image_id": 379093,
+      "image": "COCO_train2014_000000379093.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_290",
+      "image_id": 379612,
+      "image": "COCO_train2014_000000379612.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_291",
+      "image_id": 379612,
+      "image": "COCO_train2014_000000379612.jpg",
+      "object": "tv",
+      "text": "Is there a tv in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_292",
+      "image_id": 379612,
+      "image": "COCO_train2014_000000379612.jpg",
+      "object": "airplane",
+      "text": "Is there a airplane in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_293",
+      "image_id": 379612,
+      "image": "COCO_train2014_000000379612.jpg",
+      "object": "tennis racket",
+      "text": "Is there a tennis racket in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_294",
+      "image_id": 379612,
+      "image": "COCO_train2014_000000379612.jpg",
+      "object": "bear",
+      "text": "Is there a bear in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_295",
+      "image_id": 386127,
+      "image": "COCO_train2014_000000386127.jpg",
+      "object": "cup",
+      "text": "Is there a cup in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_296",
+      "image_id": 386127,
+      "image": "COCO_train2014_000000386127.jpg",
+      "object": "bottle",
+      "text": "Is there a bottle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_297",
+      "image_id": 386127,
+      "image": "COCO_train2014_000000386127.jpg",
+      "object": "oven",
+      "text": "Is there a oven in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_298",
+      "image_id": 386127,
+      "image": "COCO_train2014_000000386127.jpg",
+      "object": "bed",
+      "text": "Is there a bed in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_299",
+      "image_id": 386127,
+      "image": "COCO_train2014_000000386127.jpg",
+      "object": "chair",
+      "text": "Is there a chair in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_300",
+      "image_id": 390792,
+      "image": "COCO_train2014_000000390792.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_301",
+      "image_id": 390792,
+      "image": "COCO_train2014_000000390792.jpg",
+      "object": "surfboard",
+      "text": "Is there a surfboard in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_302",
+      "image_id": 390792,
+      "image": "COCO_train2014_000000390792.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_303",
+      "image_id": 390792,
+      "image": "COCO_train2014_000000390792.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_304",
+      "image_id": 390792,
+      "image": "COCO_train2014_000000390792.jpg",
+      "object": "refrigerator",
+      "text": "Is there a refrigerator in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_305",
+      "image_id": 392030,
+      "image": "COCO_train2014_000000392030.jpg",
+      "object": "chair",
+      "text": "Is there a chair in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_306",
+      "image_id": 392030,
+      "image": "COCO_train2014_000000392030.jpg",
+      "object": "microwave",
+      "text": "Is there a microwave in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_307",
+      "image_id": 392030,
+      "image": "COCO_train2014_000000392030.jpg",
+      "object": "fork",
+      "text": "Is there a fork in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_308",
+      "image_id": 392030,
+      "image": "COCO_train2014_000000392030.jpg",
+      "object": "laptop",
+      "text": "Is there a laptop in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_309",
+      "image_id": 392030,
+      "image": "COCO_train2014_000000392030.jpg",
+      "object": "frisbee",
+      "text": "Is there a frisbee in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_310",
+      "image_id": 396481,
+      "image": "COCO_train2014_000000396481.jpg",
+      "object": "kite",
+      "text": "Is there a kite in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_311",
+      "image_id": 396481,
+      "image": "COCO_train2014_000000396481.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_312",
+      "image_id": 396481,
+      "image": "COCO_train2014_000000396481.jpg",
+      "object": "airplane",
+      "text": "Is there a airplane in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_313",
+      "image_id": 396481,
+      "image": "COCO_train2014_000000396481.jpg",
+      "object": "zebra",
+      "text": "Is there a zebra in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_314",
+      "image_id": 396481,
+      "image": "COCO_train2014_000000396481.jpg",
+      "object": "motorcycle",
+      "text": "Is there a motorcycle in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_315",
+      "image_id": 397938,
+      "image": "COCO_train2014_000000397938.jpg",
+      "object": "carrot",
+      "text": "Is there a carrot in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_316",
+      "image_id": 397938,
+      "image": "COCO_train2014_000000397938.jpg",
+      "object": "broccoli",
+      "text": "Is there a broccoli in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_317",
+      "image_id": 397938,
+      "image": "COCO_train2014_000000397938.jpg",
+      "object": "donut",
+      "text": "Is there a donut in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_318",
+      "image_id": 397938,
+      "image": "COCO_train2014_000000397938.jpg",
+      "object": "bottle",
+      "text": "Is there a bottle in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_319",
+      "image_id": 397938,
+      "image": "COCO_train2014_000000397938.jpg",
+      "object": "remote",
+      "text": "Is there a remote in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_320",
+      "image_id": 403966,
+      "image": "COCO_train2014_000000403966.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_321",
+      "image_id": 403966,
+      "image": "COCO_train2014_000000403966.jpg",
+      "object": "bench",
+      "text": "Is there a bench in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_322",
+      "image_id": 403966,
+      "image": "COCO_train2014_000000403966.jpg",
+      "object": "skateboard",
+      "text": "Is there a skateboard in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_323",
+      "image_id": 403966,
+      "image": "COCO_train2014_000000403966.jpg",
+      "object": "tennis racket",
+      "text": "Is there a tennis racket in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_324",
+      "image_id": 403966,
+      "image": "COCO_train2014_000000403966.jpg",
+      "object": "snowboard",
+      "text": "Is there a snowboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_325",
+      "image_id": 404408,
+      "image": "COCO_train2014_000000404408.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_326",
+      "image_id": 404408,
+      "image": "COCO_train2014_000000404408.jpg",
+      "object": "suitcase",
+      "text": "Is there a suitcase in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_327",
+      "image_id": 404408,
+      "image": "COCO_train2014_000000404408.jpg",
+      "object": "toaster",
+      "text": "Is there a toaster in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_328",
+      "image_id": 404408,
+      "image": "COCO_train2014_000000404408.jpg",
+      "object": "traffic light",
+      "text": "Is there a traffic light in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_329",
+      "image_id": 404408,
+      "image": "COCO_train2014_000000404408.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_330",
+      "image_id": 410680,
+      "image": "COCO_train2014_000000410680.jpg",
+      "object": "bicycle",
+      "text": "Is there a bicycle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_331",
+      "image_id": 410680,
+      "image": "COCO_train2014_000000410680.jpg",
+      "object": "train",
+      "text": "Is there a train in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_332",
+      "image_id": 410680,
+      "image": "COCO_train2014_000000410680.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_333",
+      "image_id": 410680,
+      "image": "COCO_train2014_000000410680.jpg",
+      "object": "sheep",
+      "text": "Is there a sheep in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_334",
+      "image_id": 410680,
+      "image": "COCO_train2014_000000410680.jpg",
+      "object": "keyboard",
+      "text": "Is there a keyboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_335",
+      "image_id": 425788,
+      "image": "COCO_train2014_000000425788.jpg",
+      "object": "fork",
+      "text": "Is there a fork in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_336",
+      "image_id": 425788,
+      "image": "COCO_train2014_000000425788.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_337",
+      "image_id": 425788,
+      "image": "COCO_train2014_000000425788.jpg",
+      "object": "airplane",
+      "text": "Is there a airplane in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_338",
+      "image_id": 425788,
+      "image": "COCO_train2014_000000425788.jpg",
+      "object": "kite",
+      "text": "Is there a kite in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_339",
+      "image_id": 425788,
+      "image": "COCO_train2014_000000425788.jpg",
+      "object": "wine glass",
+      "text": "Is there a wine glass in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_340",
+      "image_id": 426355,
+      "image": "COCO_train2014_000000426355.jpg",
+      "object": "cell phone",
+      "text": "Is there a cell phone in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_341",
+      "image_id": 426355,
+      "image": "COCO_train2014_000000426355.jpg",
+      "object": "laptop",
+      "text": "Is there a laptop in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_342",
+      "image_id": 426355,
+      "image": "COCO_train2014_000000426355.jpg",
+      "object": "oven",
+      "text": "Is there a oven in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_343",
+      "image_id": 426355,
+      "image": "COCO_train2014_000000426355.jpg",
+      "object": "scissors",
+      "text": "Is there a scissors in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_344",
+      "image_id": 426355,
+      "image": "COCO_train2014_000000426355.jpg",
+      "object": "giraffe",
+      "text": "Is there a giraffe in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_345",
+      "image_id": 434940,
+      "image": "COCO_train2014_000000434940.jpg",
+      "object": "chair",
+      "text": "Is there a chair in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_346",
+      "image_id": 434940,
+      "image": "COCO_train2014_000000434940.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_347",
+      "image_id": 434940,
+      "image": "COCO_train2014_000000434940.jpg",
+      "object": "stop sign",
+      "text": "Is there a stop sign in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_348",
+      "image_id": 434940,
+      "image": "COCO_train2014_000000434940.jpg",
+      "object": "snowboard",
+      "text": "Is there a snowboard in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_349",
+      "image_id": 434940,
+      "image": "COCO_train2014_000000434940.jpg",
+      "object": "zebra",
+      "text": "Is there a zebra in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_350",
+      "image_id": 440614,
+      "image": "COCO_train2014_000000440614.jpg",
+      "object": "bowl",
+      "text": "Is there a bowl in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_351",
+      "image_id": 440614,
+      "image": "COCO_train2014_000000440614.jpg",
+      "object": "spoon",
+      "text": "Is there a spoon in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_352",
+      "image_id": 440614,
+      "image": "COCO_train2014_000000440614.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_353",
+      "image_id": 440614,
+      "image": "COCO_train2014_000000440614.jpg",
+      "object": "bird",
+      "text": "Is there a bird in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_354",
+      "image_id": 440614,
+      "image": "COCO_train2014_000000440614.jpg",
+      "object": "couch",
+      "text": "Is there a couch in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_355",
+      "image_id": 451213,
+      "image": "COCO_train2014_000000451213.jpg",
+      "object": "keyboard",
+      "text": "Is there a keyboard in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_356",
+      "image_id": 451213,
+      "image": "COCO_train2014_000000451213.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_357",
+      "image_id": 451213,
+      "image": "COCO_train2014_000000451213.jpg",
+      "object": "motorcycle",
+      "text": "Is there a motorcycle in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_358",
+      "image_id": 451213,
+      "image": "COCO_train2014_000000451213.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_359",
+      "image_id": 451213,
+      "image": "COCO_train2014_000000451213.jpg",
+      "object": "elephant",
+      "text": "Is there a elephant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_360",
+      "image_id": 452115,
+      "image": "COCO_train2014_000000452115.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_361",
+      "image_id": 452115,
+      "image": "COCO_train2014_000000452115.jpg",
+      "object": "fork",
+      "text": "Is there a fork in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_362",
+      "image_id": 452115,
+      "image": "COCO_train2014_000000452115.jpg",
+      "object": "broccoli",
+      "text": "Is there a broccoli in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_363",
+      "image_id": 452115,
+      "image": "COCO_train2014_000000452115.jpg",
+      "object": "potted plant",
+      "text": "Is there a potted plant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_364",
+      "image_id": 452115,
+      "image": "COCO_train2014_000000452115.jpg",
+      "object": "wine glass",
+      "text": "Is there a wine glass in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_365",
+      "image_id": 452750,
+      "image": "COCO_train2014_000000452750.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_366",
+      "image_id": 452750,
+      "image": "COCO_train2014_000000452750.jpg",
+      "object": "bowl",
+      "text": "Is there a bowl in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_367",
+      "image_id": 452750,
+      "image": "COCO_train2014_000000452750.jpg",
+      "object": "vase",
+      "text": "Is there a vase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_368",
+      "image_id": 452750,
+      "image": "COCO_train2014_000000452750.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_369",
+      "image_id": 452750,
+      "image": "COCO_train2014_000000452750.jpg",
+      "object": "kite",
+      "text": "Is there a kite in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_370",
+      "image_id": 460628,
+      "image": "COCO_train2014_000000460628.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_371",
+      "image_id": 460628,
+      "image": "COCO_train2014_000000460628.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_372",
+      "image_id": 460628,
+      "image": "COCO_train2014_000000460628.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_373",
+      "image_id": 460628,
+      "image": "COCO_train2014_000000460628.jpg",
+      "object": "donut",
+      "text": "Is there a donut in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_374",
+      "image_id": 460628,
+      "image": "COCO_train2014_000000460628.jpg",
+      "object": "potted plant",
+      "text": "Is there a potted plant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_375",
+      "image_id": 461004,
+      "image": "COCO_train2014_000000461004.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_376",
+      "image_id": 461004,
+      "image": "COCO_train2014_000000461004.jpg",
+      "object": "tennis racket",
+      "text": "Is there a tennis racket in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_377",
+      "image_id": 461004,
+      "image": "COCO_train2014_000000461004.jpg",
+      "object": "refrigerator",
+      "text": "Is there a refrigerator in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_378",
+      "image_id": 461004,
+      "image": "COCO_train2014_000000461004.jpg",
+      "object": "airplane",
+      "text": "Is there a airplane in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_379",
+      "image_id": 461004,
+      "image": "COCO_train2014_000000461004.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_380",
+      "image_id": 469880,
+      "image": "COCO_train2014_000000469880.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_381",
+      "image_id": 469880,
+      "image": "COCO_train2014_000000469880.jpg",
+      "object": "fork",
+      "text": "Is there a fork in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_382",
+      "image_id": 469880,
+      "image": "COCO_train2014_000000469880.jpg",
+      "object": "sandwich",
+      "text": "Is there a sandwich in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_383",
+      "image_id": 469880,
+      "image": "COCO_train2014_000000469880.jpg",
+      "object": "airplane",
+      "text": "Is there a airplane in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_384",
+      "image_id": 469880,
+      "image": "COCO_train2014_000000469880.jpg",
+      "object": "banana",
+      "text": "Is there a banana in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_385",
+      "image_id": 483557,
+      "image": "COCO_train2014_000000483557.jpg",
+      "object": "bicycle",
+      "text": "Is there a bicycle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_386",
+      "image_id": 483557,
+      "image": "COCO_train2014_000000483557.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_387",
+      "image_id": 483557,
+      "image": "COCO_train2014_000000483557.jpg",
+      "object": "mouse",
+      "text": "Is there a mouse in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_388",
+      "image_id": 483557,
+      "image": "COCO_train2014_000000483557.jpg",
+      "object": "suitcase",
+      "text": "Is there a suitcase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_389",
+      "image_id": 483557,
+      "image": "COCO_train2014_000000483557.jpg",
+      "object": "cup",
+      "text": "Is there a cup in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_390",
+      "image_id": 486644,
+      "image": "COCO_train2014_000000486644.jpg",
+      "object": "tv",
+      "text": "Is there a tv in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_391",
+      "image_id": 486644,
+      "image": "COCO_train2014_000000486644.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_392",
+      "image_id": 486644,
+      "image": "COCO_train2014_000000486644.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_393",
+      "image_id": 486644,
+      "image": "COCO_train2014_000000486644.jpg",
+      "object": "banana",
+      "text": "Is there a banana in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_394",
+      "image_id": 486644,
+      "image": "COCO_train2014_000000486644.jpg",
+      "object": "bench",
+      "text": "Is there a bench in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_395",
+      "image_id": 488396,
+      "image": "COCO_train2014_000000488396.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_396",
+      "image_id": 488396,
+      "image": "COCO_train2014_000000488396.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_397",
+      "image_id": 488396,
+      "image": "COCO_train2014_000000488396.jpg",
+      "object": "orange",
+      "text": "Is there a orange in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_398",
+      "image_id": 488396,
+      "image": "COCO_train2014_000000488396.jpg",
+      "object": "spoon",
+      "text": "Is there a spoon in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_399",
+      "image_id": 488396,
+      "image": "COCO_train2014_000000488396.jpg",
+      "object": "bottle",
+      "text": "Is there a bottle in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_400",
+      "image_id": 497915,
+      "image": "COCO_train2014_000000497915.jpg",
+      "object": "pizza",
+      "text": "Is there a pizza in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_401",
+      "image_id": 497915,
+      "image": "COCO_train2014_000000497915.jpg",
+      "object": "bottle",
+      "text": "Is there a bottle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_402",
+      "image_id": 497915,
+      "image": "COCO_train2014_000000497915.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_403",
+      "image_id": 497915,
+      "image": "COCO_train2014_000000497915.jpg",
+      "object": "umbrella",
+      "text": "Is there a umbrella in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_404",
+      "image_id": 497915,
+      "image": "COCO_train2014_000000497915.jpg",
+      "object": "bed",
+      "text": "Is there a bed in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_405",
+      "image_id": 498918,
+      "image": "COCO_train2014_000000498918.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_406",
+      "image_id": 498918,
+      "image": "COCO_train2014_000000498918.jpg",
+      "object": "horse",
+      "text": "Is there a horse in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_407",
+      "image_id": 498918,
+      "image": "COCO_train2014_000000498918.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_408",
+      "image_id": 498918,
+      "image": "COCO_train2014_000000498918.jpg",
+      "object": "kite",
+      "text": "Is there a kite in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_409",
+      "image_id": 498918,
+      "image": "COCO_train2014_000000498918.jpg",
+      "object": "umbrella",
+      "text": "Is there a umbrella in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_410",
+      "image_id": 504058,
+      "image": "COCO_train2014_000000504058.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_411",
+      "image_id": 504058,
+      "image": "COCO_train2014_000000504058.jpg",
+      "object": "book",
+      "text": "Is there a book in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_412",
+      "image_id": 504058,
+      "image": "COCO_train2014_000000504058.jpg",
+      "object": "cat",
+      "text": "Is there a cat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_413",
+      "image_id": 504058,
+      "image": "COCO_train2014_000000504058.jpg",
+      "object": "sandwich",
+      "text": "Is there a sandwich in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_414",
+      "image_id": 504058,
+      "image": "COCO_train2014_000000504058.jpg",
+      "object": "pizza",
+      "text": "Is there a pizza in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_415",
+      "image_id": 513531,
+      "image": "COCO_train2014_000000513531.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_416",
+      "image_id": 513531,
+      "image": "COCO_train2014_000000513531.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_417",
+      "image_id": 513531,
+      "image": "COCO_train2014_000000513531.jpg",
+      "object": "motorcycle",
+      "text": "Is there a motorcycle in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_418",
+      "image_id": 513531,
+      "image": "COCO_train2014_000000513531.jpg",
+      "object": "broccoli",
+      "text": "Is there a broccoli in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_419",
+      "image_id": 513531,
+      "image": "COCO_train2014_000000513531.jpg",
+      "object": "vase",
+      "text": "Is there a vase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_420",
+      "image_id": 517451,
+      "image": "COCO_train2014_000000517451.jpg",
+      "object": "sink",
+      "text": "Is there a sink in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_421",
+      "image_id": 517451,
+      "image": "COCO_train2014_000000517451.jpg",
+      "object": "toothbrush",
+      "text": "Is there a toothbrush in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_422",
+      "image_id": 517451,
+      "image": "COCO_train2014_000000517451.jpg",
+      "object": "toilet",
+      "text": "Is there a toilet in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_423",
+      "image_id": 517451,
+      "image": "COCO_train2014_000000517451.jpg",
+      "object": "toaster",
+      "text": "Is there a toaster in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_424",
+      "image_id": 517451,
+      "image": "COCO_train2014_000000517451.jpg",
+      "object": "sheep",
+      "text": "Is there a sheep in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_425",
+      "image_id": 522461,
+      "image": "COCO_train2014_000000522461.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_426",
+      "image_id": 522461,
+      "image": "COCO_train2014_000000522461.jpg",
+      "object": "skis",
+      "text": "Is there a skis in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_427",
+      "image_id": 522461,
+      "image": "COCO_train2014_000000522461.jpg",
+      "object": "teddy bear",
+      "text": "Is there a teddy bear in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_428",
+      "image_id": 522461,
+      "image": "COCO_train2014_000000522461.jpg",
+      "object": "bicycle",
+      "text": "Is there a bicycle in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_429",
+      "image_id": 522461,
+      "image": "COCO_train2014_000000522461.jpg",
+      "object": "suitcase",
+      "text": "Is there a suitcase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_430",
+      "image_id": 522465,
+      "image": "COCO_train2014_000000522465.jpg",
+      "object": "cup",
+      "text": "Is there a cup in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_431",
+      "image_id": 522465,
+      "image": "COCO_train2014_000000522465.jpg",
+      "object": "pizza",
+      "text": "Is there a pizza in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_432",
+      "image_id": 522465,
+      "image": "COCO_train2014_000000522465.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_433",
+      "image_id": 522465,
+      "image": "COCO_train2014_000000522465.jpg",
+      "object": "car",
+      "text": "Is there a car in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_434",
+      "image_id": 522465,
+      "image": "COCO_train2014_000000522465.jpg",
+      "object": "zebra",
+      "text": "Is there a zebra in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_435",
+      "image_id": 522897,
+      "image": "COCO_train2014_000000522897.jpg",
+      "object": "bottle",
+      "text": "Is there a bottle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_436",
+      "image_id": 522897,
+      "image": "COCO_train2014_000000522897.jpg",
+      "object": "chair",
+      "text": "Is there a chair in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_437",
+      "image_id": 522897,
+      "image": "COCO_train2014_000000522897.jpg",
+      "object": "clock",
+      "text": "Is there a clock in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_438",
+      "image_id": 522897,
+      "image": "COCO_train2014_000000522897.jpg",
+      "object": "tv",
+      "text": "Is there a tv in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_439",
+      "image_id": 522897,
+      "image": "COCO_train2014_000000522897.jpg",
+      "object": "pizza",
+      "text": "Is there a pizza in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_440",
+      "image_id": 523366,
+      "image": "COCO_train2014_000000523366.jpg",
+      "object": "bed",
+      "text": "Is there a bed in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_441",
+      "image_id": 523366,
+      "image": "COCO_train2014_000000523366.jpg",
+      "object": "cat",
+      "text": "Is there a cat in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_442",
+      "image_id": 523366,
+      "image": "COCO_train2014_000000523366.jpg",
+      "object": "teddy bear",
+      "text": "Is there a teddy bear in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_443",
+      "image_id": 523366,
+      "image": "COCO_train2014_000000523366.jpg",
+      "object": "sink",
+      "text": "Is there a sink in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_444",
+      "image_id": 523366,
+      "image": "COCO_train2014_000000523366.jpg",
+      "object": "boat",
+      "text": "Is there a boat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_445",
+      "image_id": 524866,
+      "image": "COCO_train2014_000000524866.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_446",
+      "image_id": 524866,
+      "image": "COCO_train2014_000000524866.jpg",
+      "object": "keyboard",
+      "text": "Is there a keyboard in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_447",
+      "image_id": 524866,
+      "image": "COCO_train2014_000000524866.jpg",
+      "object": "elephant",
+      "text": "Is there a elephant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_448",
+      "image_id": 524866,
+      "image": "COCO_train2014_000000524866.jpg",
+      "object": "dog",
+      "text": "Is there a dog in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_449",
+      "image_id": 524866,
+      "image": "COCO_train2014_000000524866.jpg",
+      "object": "cake",
+      "text": "Is there a cake in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_450",
+      "image_id": 527173,
+      "image": "COCO_train2014_000000527173.jpg",
+      "object": "bicycle",
+      "text": "Is there a bicycle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_451",
+      "image_id": 527173,
+      "image": "COCO_train2014_000000527173.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_452",
+      "image_id": 527173,
+      "image": "COCO_train2014_000000527173.jpg",
+      "object": "bird",
+      "text": "Is there a bird in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_453",
+      "image_id": 527173,
+      "image": "COCO_train2014_000000527173.jpg",
+      "object": "vase",
+      "text": "Is there a vase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_454",
+      "image_id": 527173,
+      "image": "COCO_train2014_000000527173.jpg",
+      "object": "parking meter",
+      "text": "Is there a parking meter in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_455",
+      "image_id": 534024,
+      "image": "COCO_train2014_000000534024.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_456",
+      "image_id": 534024,
+      "image": "COCO_train2014_000000534024.jpg",
+      "object": "sink",
+      "text": "Is there a sink in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_457",
+      "image_id": 534024,
+      "image": "COCO_train2014_000000534024.jpg",
+      "object": "baseball glove",
+      "text": "Is there a baseball glove in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_458",
+      "image_id": 534024,
+      "image": "COCO_train2014_000000534024.jpg",
+      "object": "vase",
+      "text": "Is there a vase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_459",
+      "image_id": 534024,
+      "image": "COCO_train2014_000000534024.jpg",
+      "object": "giraffe",
+      "text": "Is there a giraffe in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_460",
+      "image_id": 547265,
+      "image": "COCO_train2014_000000547265.jpg",
+      "object": "bottle",
+      "text": "Is there a bottle in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_461",
+      "image_id": 547265,
+      "image": "COCO_train2014_000000547265.jpg",
+      "object": "toilet",
+      "text": "Is there a toilet in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_462",
+      "image_id": 547265,
+      "image": "COCO_train2014_000000547265.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_463",
+      "image_id": 547265,
+      "image": "COCO_train2014_000000547265.jpg",
+      "object": "stop sign",
+      "text": "Is there a stop sign in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_464",
+      "image_id": 547265,
+      "image": "COCO_train2014_000000547265.jpg",
+      "object": "bicycle",
+      "text": "Is there a bicycle in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_465",
+      "image_id": 550239,
+      "image": "COCO_train2014_000000550239.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_466",
+      "image_id": 550239,
+      "image": "COCO_train2014_000000550239.jpg",
+      "object": "wine glass",
+      "text": "Is there a wine glass in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_467",
+      "image_id": 550239,
+      "image": "COCO_train2014_000000550239.jpg",
+      "object": "pizza",
+      "text": "Is there a pizza in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_468",
+      "image_id": 550239,
+      "image": "COCO_train2014_000000550239.jpg",
+      "object": "toilet",
+      "text": "Is there a toilet in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_469",
+      "image_id": 550239,
+      "image": "COCO_train2014_000000550239.jpg",
+      "object": "tv",
+      "text": "Is there a tv in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_470",
+      "image_id": 554335,
+      "image": "COCO_train2014_000000554335.jpg",
+      "object": "tie",
+      "text": "Is there a tie in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_471",
+      "image_id": 554335,
+      "image": "COCO_train2014_000000554335.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_472",
+      "image_id": 554335,
+      "image": "COCO_train2014_000000554335.jpg",
+      "object": "dining table",
+      "text": "Is there a dining table in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_473",
+      "image_id": 554335,
+      "image": "COCO_train2014_000000554335.jpg",
+      "object": "skis",
+      "text": "Is there a skis in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_474",
+      "image_id": 554335,
+      "image": "COCO_train2014_000000554335.jpg",
+      "object": "frisbee",
+      "text": "Is there a frisbee in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_475",
+      "image_id": 554621,
+      "image": "COCO_train2014_000000554621.jpg",
+      "object": "backpack",
+      "text": "Is there a backpack in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_476",
+      "image_id": 554621,
+      "image": "COCO_train2014_000000554621.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_477",
+      "image_id": 554621,
+      "image": "COCO_train2014_000000554621.jpg",
+      "object": "remote",
+      "text": "Is there a remote in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_478",
+      "image_id": 554621,
+      "image": "COCO_train2014_000000554621.jpg",
+      "object": "bowl",
+      "text": "Is there a bowl in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_479",
+      "image_id": 554621,
+      "image": "COCO_train2014_000000554621.jpg",
+      "object": "bicycle",
+      "text": "Is there a bicycle in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_480",
+      "image_id": 563791,
+      "image": "COCO_train2014_000000563791.jpg",
+      "object": "skis",
+      "text": "Is there a skis in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_481",
+      "image_id": 563791,
+      "image": "COCO_train2014_000000563791.jpg",
+      "object": "dog",
+      "text": "Is there a dog in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_482",
+      "image_id": 563791,
+      "image": "COCO_train2014_000000563791.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_483",
+      "image_id": 563791,
+      "image": "COCO_train2014_000000563791.jpg",
+      "object": "bus",
+      "text": "Is there a bus in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_484",
+      "image_id": 563791,
+      "image": "COCO_train2014_000000563791.jpg",
+      "object": "baseball bat",
+      "text": "Is there a baseball bat in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_485",
+      "image_id": 565183,
+      "image": "COCO_train2014_000000565183.jpg",
+      "object": "umbrella",
+      "text": "Is there a umbrella in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_486",
+      "image_id": 565183,
+      "image": "COCO_train2014_000000565183.jpg",
+      "object": "bench",
+      "text": "Is there a bench in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_487",
+      "image_id": 565183,
+      "image": "COCO_train2014_000000565183.jpg",
+      "object": "bed",
+      "text": "Is there a bed in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_488",
+      "image_id": 565183,
+      "image": "COCO_train2014_000000565183.jpg",
+      "object": "potted plant",
+      "text": "Is there a potted plant in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_489",
+      "image_id": 565183,
+      "image": "COCO_train2014_000000565183.jpg",
+      "object": "wine glass",
+      "text": "Is there a wine glass in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_490",
+      "image_id": 570013,
+      "image": "COCO_train2014_000000570013.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_491",
+      "image_id": 570013,
+      "image": "COCO_train2014_000000570013.jpg",
+      "object": "handbag",
+      "text": "Is there a handbag in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_492",
+      "image_id": 570013,
+      "image": "COCO_train2014_000000570013.jpg",
+      "object": "umbrella",
+      "text": "Is there a umbrella in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_493",
+      "image_id": 570013,
+      "image": "COCO_train2014_000000570013.jpg",
+      "object": "knife",
+      "text": "Is there a knife in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_494",
+      "image_id": 570013,
+      "image": "COCO_train2014_000000570013.jpg",
+      "object": "suitcase",
+      "text": "Is there a suitcase in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_495",
+      "image_id": 571661,
+      "image": "COCO_train2014_000000571661.jpg",
+      "object": "person",
+      "text": "Is there a person in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_496",
+      "image_id": 571661,
+      "image": "COCO_train2014_000000571661.jpg",
+      "object": "banana",
+      "text": "Is there a banana in the image?",
+      "label": "yes"
+    },
+    {
+      "uid": "cal_497",
+      "image_id": 571661,
+      "image": "COCO_train2014_000000571661.jpg",
+      "object": "clock",
+      "text": "Is there a clock in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_498",
+      "image_id": 571661,
+      "image": "COCO_train2014_000000571661.jpg",
+      "object": "broccoli",
+      "text": "Is there a broccoli in the image?",
+      "label": "no"
+    },
+    {
+      "uid": "cal_499",
+      "image_id": 571661,
+      "image": "COCO_train2014_000000571661.jpg",
+      "object": "bus",
+      "text": "Is there a bus in the image?",
+      "label": "no"
+    }
+  ]
+}

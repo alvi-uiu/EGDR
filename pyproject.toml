@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "egdr"
+version = "1.0.0"
+description = "Entropy-Gated Dynamic Rectification for object hallucination in large vision-language models"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.10"
+authors = [
+  { name = "Riasad Alvi" },
+  { name = "Md. Asaduzzaman Shuvo" },
+  { name = "Md. Ahashan Habib" },
+  { name = "Md. Faiyaz Abdullah Sayeedi" },
+]
+dependencies = [
+  "torch>=2.1",
+  "transformers==4.46.3",
+  "accelerate>=0.26",
+  "pillow",
+  "numpy",
+  "pyyaml",
+  "nltk",
+  "inflect",
+]
+
+[tool.setuptools.packages.find]
+include = ["egdr*"]
+
+[tool.setuptools.package-data]
+egdr = ["metrics/synonyms.txt"]

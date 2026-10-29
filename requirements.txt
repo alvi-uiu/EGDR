@@ -1,0 +1,9 @@
+# Install a CUDA build of PyTorch first: https://pytorch.org/get-started/locally/
+torch>=2.1
+transformers==4.46.3
+accelerate>=0.26
+pillow
+numpy
+pyyaml
+nltk
+inflect
